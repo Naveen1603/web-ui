@@ -70,6 +70,7 @@ async def test_browser_use_org():
                 browser_window_size=BrowserContextWindowSize(
                     width=window_w, height=window_h
                 ),
+                highlight_elements=False,
             )
     ) as browser_context:
         agent = Agent(

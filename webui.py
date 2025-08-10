@@ -366,6 +366,7 @@ async def run_org_agent(
                     browser_window_size=BrowserContextWindowSize(
                         width=window_w, height=window_h
                     ),
+                    highlight_elements=False,
                 )
             )
 
@@ -473,6 +474,7 @@ async def run_custom_agent(
                     browser_window_size=BrowserContextWindowSize(
                         width=window_w, height=window_h
                     ),
+                    highlight_elements=False,
                 )
             )
 

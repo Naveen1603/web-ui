@@ -47,3 +47,9 @@ class CustomController(Controller):
             await page.keyboard.type(text)
 
             return ActionResult(extracted_content=text)
+
+        @self.registry.action('Ask user for information')
+        async def ask_human(question: str) -> ActionResult:
+            logger.info("--"*10 + "*"*5 + "--"*10)
+            logger.info(f"🤯 Please provide answer to the requested question: {question}")
+            return ActionResult(extracted_content=input(f'\n{question}\nInput: '))
